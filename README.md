@@ -11,6 +11,8 @@ Intended for those wishing to start a new Blogger blog.
 
 <h3>Customizations:</h3>
 
+The Template works as is, however you should provide your own images.
+
 <b>There are two locations in the Template for the two images required required by Google's (SDTT).</b>
 ```
 <!--  Schema Mods:Provide your image urls and sizes here -->
