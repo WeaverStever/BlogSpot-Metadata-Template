@@ -50,10 +50,13 @@ Just provide your Google+ id in the place of the xxxxxxxxxxxxxxxxxxxxx and uncom
 
 <h3>Resources</h3>
 
-Hat Tip to Technohalf for sharing a tutorial with mostly correct information at: http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html?showComment=1454110555230#c3338431680769504293
+Hat Tip to Technohalf for sharing a tutorial with mostly correct information at:<br/> http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html?showComment=1454110555230#c3338431680769504293
 
-Google's Structured Data Testing Tool:
+Google's Structured Data Testing Tool:<br/>
 https://developers.google.com/structured-data/testing-tool/
 
-Google's Rich Snipets for Articles:
+Google's Rich Snipets for Articles:<br/>
 https://developers.google.com/structured-data/rich-snippets/articles
+
+Schema.org: Article<br/>
+https://schema.org/Article
