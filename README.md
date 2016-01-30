@@ -7,18 +7,20 @@ This is a standard "Simple" Template created by Designer: Josh Peterson (URL:www
 
 Intended for those wishing to start a new Blogger blog. 
 
-*** WARNING: Installing over an existing blog will destroy your existing layout and other preferences. 
+<b>*** WARNING:</b> Installing over an existing blog will destroy your existing layout and other preferences. 
 
 <h3>Customizations:</h3>
 
-The Template works as is, however you should provide your own images.
+The Template works as is, however you should provide your own images.<br/>
+<b>***Caveat:</b> This method will tell Google to use the same image for all posts. This is not a problem for the Orgation's logo, however not entirely correct for the blogposting -- working on a solution.
+
 
 <b>There are two locations in the Template for the two images required by Google's (SDTT).</b>
 ```
 <!--  Schema Mods:Provide your image urls and sizes here -->
   <!-- Image for the blogposting -->  
-              <meta itemprop='url' content='full-url-to.YOUR-BLOG'S-IMAGE.png'/>
-              <meta itemprop='width' content='800'/>
+              <meta itemprop='url' content='full-url-to.YOUR-BLOGPOST'S-IMAGE.png'/>
+              <meta itemprop='width' content='800'/> <!-- Images should be at least 696 pixels wide.-->
               <meta itemprop='height' content='800'/>
             </div>
             
@@ -28,7 +30,7 @@ The Template works as is, however you should provide your own images.
                 <img style='display:none;' src='full-url-to.YOUR-ORGANIZATION'S-IMAGE.png'/>
                 <meta itemprop='url' content='full-url-to.YOUR-ORGANIZATION'S-IMAGE.png'/>
                 <meta itemprop='width' content='600'/>
-                <meta itemprop='height' content='60'/>
+                <meta itemprop='height' content='60'/> <!--Logos should be no wider than 600px, and no taller than 60px-->
               </div>
             <meta itemprop='name' expr:content='data:blog.title'/>
             </div>
