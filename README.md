@@ -62,3 +62,7 @@ https://developers.google.com/structured-data/rich-snippets/articles
 
 Schema.org: Article<br/>
 https://schema.org/Article
+
+<h3>Additional</h3>
+There is an additional "datePublished" possible schema error (server setting) that has to be manually adjusted, short times/dates like 3:39PM are not accepted. This setting is not stored in the Template.
+Here's the fix. http://newbloggerthemes.com/blog/fix-posted-date-undefined-error-blogger/
