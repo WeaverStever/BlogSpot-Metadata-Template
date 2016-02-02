@@ -1,46 +1,19 @@
 # BlogSpot-Metadata-Template
 Blogspot template with Schema microdata modifications
 
-A BlogSpot (Google Blogger) template modified to eliminate Schema.org errors when testing with Google's Structured Data Testing Tool (SDTT) as of January 29, 2016.
+Provided is a BlogSpot (Google Blogger) template modified to eliminate Schema.org errors when testing with [Google's Structured Data Testing Tool (SDTT)](https://developers.google.com/structured-data/testing-tool/)  as of January 29, 2016.  This is modified from a standard "Simple" Template created by Designer: Josh Peterson (URL:www.noaesthetic.com). The template seems to retain all of the functionality of the "Blogger Template Designer".
 
-This is a standard "Simple" Template created by Designer: Josh Peterson (URL:www.noaesthetic.com), which seems to retain all of the functionality of the "Blogger Template Designer".
-
-Intended for those wishing to start a new Blogger blog. 
+The template is intended for those wishing to start a new Blogger blog.
+For instruction on how to modify your existing template, see the [Wiki](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wik).
 
 <b>*** WARNING:</b> Installing over an existing blog will destroy your existing layout and other preferences. 
 
-<h3>Customizations:</h3>
+<h3>Required modifications:</h3>
 
-The Template works as is, however you should provide your own images.<br/>
-<b>***Caveat:</b> This method will tell Google to use the same image for all posts. This is not a problem for the Orgation's logo, however not entirely correct for the blogposting -- working on a solution.
+There are two locations in the Template for the URL to your properly sized logo, which is required, by Google's (SDTT). 
+Search the within the template for "Schema Mods:" to locate those areas and provide the URLyour your image. See [Blogger: publisher structured data error](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wiki/Blogger:-publisher-structured-data-error)
 
-
-<b>There are two locations in the Template for the two images required by Google's (SDTT).</b>
-```
-<!--  Schema Mods:Provide your image urls and sizes here -->
-  <!-- Image for the blogposting -->  
-              <meta itemprop='url' content='full-url-to.YOUR-BLOGPOST'S-IMAGE.png'/>
-              <meta itemprop='width' content='800'/> <!-- Images should be at least 696 pixels wide.-->
-              <meta itemprop='height' content='800'/>
-            </div>
-            
-            <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
-              <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-  <!--Image for the Organization --> 
-                <img style='display:none;' src='full-url-to.YOUR-ORGANIZATION'S-IMAGE.png'/>
-                <meta itemprop='url' content='full-url-to.YOUR-ORGANIZATION'S-IMAGE.png'/>
-                <meta itemprop='width' content='600'/>
-                <meta itemprop='height' content='60'/> <!--Logos should be no wider than 600px, and no taller than 60px-->
-              </div>
-            <meta itemprop='name' expr:content='data:blog.title'/>
-            </div>
-          </div>
-<!--  Schema Mods:End -->
-
-```
-Search the within the template for "Schema Mods:" to locate those areas and provide your images.
-(Dummy images are currently in those sections for testing.)
-
+<h3>Other modifications:</h3>
 <b>There is also a commented area in the <Head> section for providing your Google Plus identity.</b>
 ```
 <!--  Schema Mods: Code to provide Google+ account programatically (for removal of "About Me" gadget)
@@ -52,17 +25,13 @@ Just provide your Google+ id in the place of the xxxxxxxxxxxxxxxxxxxxx and uncom
 
 <h3>Resources</h3>
 
-Hat Tip to Technohalf for sharing a tutorial with mostly correct information at:<br/> http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html?showComment=1454110555230#c3338431680769504293
-
-Google's Structured Data Testing Tool:<br/>
-https://developers.google.com/structured-data/testing-tool/
-
-Google's Rich Snipets for Articles:<br/>
-https://developers.google.com/structured-data/rich-snippets/articles
-
-Schema.org: Article<br/>
-https://schema.org/Article
+Hat Tip to Technohalf for sharing a [tutorial](http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html) with mostly correct information at:<br/> 
+[Google's Structured Data Testing Tool:](https://developers.google.com/structured-data/testing-tool/)<br/>
+[Google's Rich Snipets for Articles:](https://developers.google.com/structured-data/rich-snippets/articles)<br/>
+[Schema.org: Article](https://schema.org/Article)<br/>
 
 <h3>Additional</h3>
 There is an additional "datePublished" possible schema error (server setting) that has to be manually adjusted, short times/dates like 3:39PM are not accepted. This setting is not stored in the Template.
 Here's the fix. http://newbloggerthemes.com/blog/fix-posted-date-undefined-error-blogger/
+
+This editor's coffee and peanut butter fund, [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RJNBR2FZW9DAJ).
