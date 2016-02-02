@@ -3,15 +3,13 @@
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
-
-<!--  Schema Mods: Code to provide your Google+ account programatically (for removal of "About Me" gadget)
-   <link rel='Author' href='http://plus.google.com/xxxxxxxxxxxxxxxxxxxxx'/>
-   <link rel='Publisher' href='http://plus.google.com/xxxxxxxxxxxxxxxxxxxxx'/>
--->
-
-
-   <b:include data='blog' name='all-head-content'/>
+    <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
+
+    <!--  Code to provide Google+ account programatically (for removal of "About Me" gadget)-->
+<!--   <link rel='Author' href='http://plus.google.com/xxxxxxxxxxxxxxxxxxxxx'/>
+       <link rel='Publisher' href='http://plus.google.com/xxxxxxxxxxxxxxxxxxxxx'/>
+-->
 
     <b:skin><![CDATA[/*
 -----------------------------------------------
@@ -1302,12 +1300,33 @@ head.appendChild(script);
     <div class='date-posts'>
       <div class='post-outer'>
         <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-        <meta itemscope='itemscope' itemprop='mainEntityOfPage'  itemType='https://schema.org/WebPage' expr:itemid='data:post.link ? data:post.link : data:post.url'/>
+          <meta itemscope='itemscope' itemprop='mainEntityOfPage'  itemType='https://schema.org/WebPage' expr:itemid='data:post.link ? data:post.link : data:post.url'/>
+          <meta expr:content='data:post.timestamp' itemprop='datePublished'/>
+          <meta expr:content='data:post.lastUpdatedISO8601' itemprop='dateModified'/>
+
+          <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+            <b:if cond='data:post.firstImageUrl'>
+              <img style='display:none;' expr:src='data:post.firstImageUrl'/>
+              <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
+            </b:if>
+            <meta itemprop='width' content='800'/>
+            <meta itemprop='height' content='800'/>
+          </div>
+
+          <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+            <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+              <!-- Schema Mods: THE FOLLOWING URL WILL FAIL - CHANGE IT -->
+              <meta itemprop='url' content='http://www.myOrganization.com/OrgImage.png'/> 
+              <meta itemprop='width' content='600'/> <!-- Logos should be no wider than 600px. -->
+              <meta itemprop='height' content='60'/> <!-- and no taller than 60px.-->
+            </div>
+            <meta itemprop='name' expr:content='data:blog.title'/>
+          </div>
+        
           <b:if cond='data:post.thumbnailUrl'>
             <meta expr:content='data:post.thumbnailUrl' itemprop='url'/>
           </b:if>
-          <meta expr:content='data:post.timestamp' itemprop='datePublished'/>
-          <meta expr:content='data:post.lastUpdatedISO8601' itemprop='dateModified'/>
+
           <a expr:name='data:post.id'/>
           <b:if cond='data:post.title'>
             <h3 class='post-title entry-title' itemprop='headline'>
@@ -1328,30 +1347,7 @@ head.appendChild(script);
           <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
             <data:post.body/>
             <div style='clear: both;'/> <!-- clear for photos floats -->
-            <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-              <b:if cond='data:post.firstImageUrl'>
-                <img style='display:none;' expr:src='data:post.firstImageUrl'/>
-                <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
-              </b:if>
-<!--  Schema Mods:Provide your image urls and sizes here -->
-  <!-- Image for the blogposting -->  
-              <meta itemprop='url' content='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-              <meta itemprop='width' content='800'/>
-              <meta itemprop='height' content='800'/>
-            </div>
-            
-            <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
-              <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-  <!--Image for the Organization --> 
-                <img style='display:none;' src='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-                <meta itemprop='url' content='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-                <meta itemprop='width' content='600'/>
-                <meta itemprop='height' content='60'/>
-              </div>
-            <meta itemprop='name' expr:content='data:blog.title'/>
-            </div>
           </div>
-<!--  Schema Mods:End -->
 
           <div class='post-footer'>
             <div class='post-footer-line post-footer-line-1'>
@@ -1432,13 +1428,29 @@ head.appendChild(script);
   <div class='clear'/>
 </b:includable>
               <b:includable id='post' var='post'>
-   <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-   <meta itemscope='itemscope' itemprop='mainEntityOfPage'  itemType='https://schema.org/WebPage' expr:itemid='data:post.link ? data:post.link : data:post.url'/>
-    <b:if cond='data:post.firstImageUrl'>
-      <meta expr:content='data:post.firstImageUrl' itemprop='url'/>
-    </b:if>
-     <meta expr:content='data:post.timestamp' itemprop='datePublished'/>
-     <meta expr:content='data:post.lastUpdatedISO8601' itemprop='dateModified'/>
+  <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+    <meta itemscope='itemscope' itemprop='mainEntityOfPage'  itemType='https://schema.org/WebPage' expr:itemid='data:post.link ? data:post.link : data:post.url'/>
+    <meta expr:content='data:post.timestamp' itemprop='datePublished'/>
+    <meta expr:content='data:post.lastUpdatedISO8601' itemprop='dateModified'/>
+
+    <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+      <b:if cond='data:post.firstImageUrl'>
+        <img style='display:none;' expr:src='data:post.firstImageUrl'/>
+        <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
+      </b:if>
+      <meta itemprop='width' content='800'/>
+      <meta itemprop='height' content='800'/>
+    </div>
+
+    <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+      <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+        <!-- Schema Mods: THE FOLLOWING URL WILL FAIL - CHANGE IT -->
+        <meta itemprop='url' content='http://www.myOrganization.com/OrgImage.png'/> 
+        <meta itemprop='width' content='600'/> <!-- Logos should be no wider than 600px. -->
+        <meta itemprop='height' content='60'/> <!-- and no taller than 60px.-->
+      </div>
+      <meta itemprop='name' expr:content='data:blog.title'/>
+    </div>
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
@@ -1459,29 +1471,6 @@ head.appendChild(script);
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
       <data:post.body/>
       <div style='clear: both;'/> <!-- clear for photos floats -->
-      <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-         <b:if cond='data:post.firstImageUrl'>
-          <img style='display:none;' expr:src='data:post.firstImageUrl'/>
-          <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
-        </b:if>
-<!--  Schema Mods:Provide your image urls and sizes here -->
-  <!-- Image for the blogposting --> 
-            <meta itemprop='url' content='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-            <meta itemprop='width' content='800'/>
-            <meta itemprop='height' content='800'/>
-      </div>
-
-      <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
-          <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-  <!--Image for the Organization -->
-            <img style='display:none;' src='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-            <meta itemprop='url' content='https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png'/>
-            <meta itemprop='width' content='600'/>
-            <meta itemprop='height' content='60'/>
-<!--  Schema Mods: End -->
-          </div>
-          <meta itemprop='name' expr:content='data:blog.title'/>
-      </div>
     </div>
 
     <b:if cond='data:post.hasJumpLink'>
