@@ -25,7 +25,7 @@ Just provide your Google+ id in the place of the xxxxxxxxxxxxxxxxxxxxx and uncom
 
 <h3>Resources</h3>
 
-Hat Tip to Technohalf for sharing a [tutorial](http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html) with mostly correct information at:<br/> 
+Hat Tip to Technohalf for sharing a mostly correct [tutorial](http://www.technohalf.com/2015/12/how-to-fix-all-structured-data-errors.html).<br/> 
 [Google's Structured Data Testing Tool:](https://developers.google.com/structured-data/testing-tool/)<br/>
 [Google's Rich Snipets for Articles:](https://developers.google.com/structured-data/rich-snippets/articles)<br/>
 [Schema.org: Article](https://schema.org/Article)<br/>
