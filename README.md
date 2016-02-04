@@ -6,7 +6,7 @@ Provided is a BlogSpot (Google Blogger) template modified to eliminate Schema.or
 The template is intended for those wishing to start a new Blogger blog.
 For instruction on how to modify your existing template, see the [Wiki](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wik).
 
-<b>*** WARNING:</b> Installing over an existing blog will destroy your existing layout and other preferences. 
+<b>*** WARNING:</b> Installing over an existing blog will destroy your existing layout and other preferences. See the articles in the [Wiki](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wiki) for modifying existing blogs.
 
 <h3>Required modifications:</h3>
 
