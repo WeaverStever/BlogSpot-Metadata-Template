@@ -11,7 +11,7 @@ For instruction on how to modify your existing template, see the [Wiki](https://
 <h3>Required modifications:</h3>
 
 There are two locations in the Template for the URL to your properly sized logo, which is required by Google's (SDTT). 
-Search the within the template for "Schema Mods:" to locate those areas and provide the URLyour your image. See [Blogger: publisher structured data error](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wiki/Blogger:-publisher-structured-data-error) for details.
+Search the within the template for "Schema Mods:" to locate those areas and provide the URL to your image. See [Blogger: publisher structured data error](https://github.com/WeaverStever/BlogSpot-Metadata-Template/wiki/Blogger:-publisher-structured-data-error) for details.
 
 <h3>Other modifications:</h3>
 <b>There is also a commented area in the <Head> section for providing your Google Plus identity.</b>
