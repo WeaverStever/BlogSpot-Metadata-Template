@@ -1307,7 +1307,7 @@ head.appendChild(script);
           <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
             <b:if cond='data:post.firstImageUrl'>
               <img style='display:none;' expr:src='data:post.firstImageUrl'/>
-              <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
+              <meta itemprop='image' expr:content='data:post.firstImageUrl'/>
             </b:if>
             <meta itemprop='width' content='800'/>
             <meta itemprop='height' content='800'/>
@@ -1436,7 +1436,7 @@ head.appendChild(script);
     <div itemprop='image' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
       <b:if cond='data:post.firstImageUrl'>
         <img style='display:none;' expr:src='data:post.firstImageUrl'/>
-        <meta itemprop='url' expr:content='data:post.firstImageUrl'/>
+        <meta itemprop='image' expr:content='data:post.firstImageUrl'/>
       </b:if>
       <meta itemprop='width' content='800'/>
       <meta itemprop='height' content='800'/>
