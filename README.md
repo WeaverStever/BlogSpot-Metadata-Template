@@ -32,5 +32,5 @@ Hat Tip to Technohalf for sharing a mostly correct [tutorial](http://www.technoh
 <h3>Additional</h3>
 There is an additional "datePublished" possible schema error (server setting) that has to be manually adjusted, short times/dates like 3:39PM are not accepted. This setting is not stored in the Template.
 Here's the fix. http://newbloggerthemes.com/blog/fix-posted-date-undefined-error-blogger/
-
-This editor's coffee and peanutbutter fund can be fed here:  [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7S8M25A9VTW9Y).
+<!--
+This editor's coffee and peanutbutter fund can be fed here:  [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7S8M25A9VTW9Y).-->
