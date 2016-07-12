@@ -1,7 +1,7 @@
 # BlogSpot-Metadata-Template
 Blogger - Blogspot template with Schema microdata modifications
 
-Provided is a BlogSpot (Google Blogger) template modified to eliminate Schema.org errors when testing with [Google's Structured Data Testing Tool (SDTT)](https://developers.google.com/structured-data/testing-tool/)  as of January 29, 2016.  This is modified from a standard "Simple" Template created by Designer: Josh Peterson (URL:www.noaesthetic.com). The template seems to retain all of the functionality of the "Blogger Template Designer".
+Provided is a BlogSpot (Google Blogger) template modified to eliminate Schema.org errors when testing with [Google's Structured Data Testing Tool (SDTT)](https://developers.google.com/structured-data/testing-tool/)  as of January 29, 2016.  This is modified from a standard "Simple" Template created by Designer: Josh Peterson (URL:www.noaesthetic.com). The template seems to retain all of the functionality of the "Blogger Template Designer."
 
 The Template is intended for those wishing to start a new Blogger blog.
 
